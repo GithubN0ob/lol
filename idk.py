@@ -20,7 +20,7 @@ def word_generator(x):
 # tap(250, 2100) #chat
 # tap(500, 500)
 
-for i in range(100):
+for i in range(0):
 	type(word_generator(14))
 	tap(1050, 1420)
 
@@ -31,11 +31,16 @@ cd documents\desktop
 #for the command line
 
 
-# if __name__ == "__main__":
-# 	break_ = True
-# 	while break_:
-# 		x = input("say something bruv\n")
-# 		if x=="55501555015":
-# 			break
-# 		type(x)
-# 		tap(1000, 1280)
+if __name__ == "__main__":
+	message_count = int(input("How many messages do you want to send? (Integer) "))
+	send_custom_message = bool(input("Send custom message? (y/n) ").lower() == "y")
+	if send_custom_message:
+		message = input("message: ")
+		for i in range(message_count):
+			type(message)
+			tap(1050, 1420)
+	else:
+		message_length = int(input("Length of [randomly generated] message? (Integer) "))
+		for i in range(message_count):
+			type(word_generator(message_length))
+			tap(1050, 1420)
